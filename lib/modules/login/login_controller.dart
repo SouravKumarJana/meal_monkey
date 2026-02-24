@@ -3,11 +3,9 @@ import 'package:get/get.dart';
 import '../../routes/app_routes.dart';
 class LoginController extends GetxController {
 
-  // Text Controllers
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
-  // Loading state (optional for future API)
   final isLoading = false.obs;
 
   void login() {
@@ -15,7 +13,6 @@ class LoginController extends GetxController {
     final email = emailController.text.trim();
     final password = passwordController.text.trim();
 
-    // Validation
     if (email.isEmpty || password.isEmpty) {
       Get.snackbar(
         "Error",
@@ -25,7 +22,6 @@ class LoginController extends GetxController {
       return;
     }
 
-    // If valid → Navigate
     Get.offAllNamed(Routes.onboarding);
   }
 

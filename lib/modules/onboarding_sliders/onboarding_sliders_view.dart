@@ -46,15 +46,12 @@ class OnboardingSlidersView extends GetView<OnboardingSlidersController> {
 
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: Obx(
-                () => PrimaryButton(
-                  title: controller.pageIndex.value == 2
-                      ? "Get Started"
-                      : "Next",
+              child: PrimaryButton(
+                  title: 'Next',
                   onPressed: controller.next,
-                ),
               ),
             ),
+            
 
             const SizedBox(height: 70),
           ],
