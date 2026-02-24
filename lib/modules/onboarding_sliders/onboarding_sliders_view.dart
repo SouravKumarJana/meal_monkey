@@ -1,0 +1,65 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import '../../core/constants/app_assets.dart';
+import '../../core/widgets/primary_button.dart';
+import 'onboarding_sliders_controller.dart';
+import '../../core/widgets/slide_content.dart';
+import '../../core/constants/app_colors.dart';
+class OnboardingSlidersView extends GetView<OnboardingSlidersController> {
+  const OnboardingSlidersView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      backgroundColor: AppColors.backgroundColor,
+      body: SafeArea(
+        child: Column(
+          children: [
+
+            Expanded(
+              child: PageView(
+                controller: controller.pageController,
+                onPageChanged: controller.onChanged,
+                children: const [
+                  SlideContent(
+                    image: AppAssets.findFoodYouLoveVector,
+                    title: "Find Food You Love",
+                    subtitle:
+                        "Discover the best foods from over 1,000\nrestaurants and fast delivery to your doorstep",
+                  ),
+                  SlideContent(
+                    image: AppAssets.deliveryVector,
+                    title: "Fast Delivery",
+                    subtitle:
+                        "Fast food delivery to your home, office\nwherever you are",
+                  ),
+                  SlideContent(
+                    image: AppAssets.livrTrackingVector,
+                    title: "Live Tracking",
+                    subtitle:
+                        "Real time tracking of your food on the app\nonce you placed the order",
+                  ),
+                ],
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Obx(
+                () => PrimaryButton(
+                  title: controller.pageIndex.value == 2
+                      ? "Get Started"
+                      : "Next",
+                  onPressed: controller.next,
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 70),
+          ],
+        ),
+      ),
+    );
+  }
+}
