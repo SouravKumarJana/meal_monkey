@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../modules/onboarding_sliders/onboarding_sliders_controller.dart';
-import '../../core/constants/app_colors.dart';
+import '../onboarding_sliders_controller.dart';
+import '../../../core/constants/app_colors.dart';
 class SlideContent extends GetView<OnboardingSlidersController> {
   final String image;
   final String title;
   final String subtitle;
 
   const SlideContent({
+    super.key, 
     required this.image,
     required this.title,
     required this.subtitle,

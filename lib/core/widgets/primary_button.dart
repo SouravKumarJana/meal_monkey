@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../constants/app_colors.dart';
-
+import '../constants/app_text_size.dart';
 class PrimaryButton extends StatelessWidget {
   final String title;
   final Color backgroundColor;
@@ -29,9 +29,8 @@ class PrimaryButton extends StatelessWidget {
           ),
         ),
         onPressed: onPressed,
-        child: Text(title, style: TextStyle(color: textColor, fontSize: 16),
+        child: Text(title, style: TextStyle(color: textColor, fontSize: AppTextSize.buttonTextSize, fontWeight: FontWeight.bold)),
       ),
-      ),
-    );
+      );
   }
 }

@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import '../../core/constants/app_assets.dart';
 import '../../core/widgets/primary_button.dart';
 import 'onboarding_sliders_controller.dart';
-import '../../core/widgets/slide_content.dart';
+import 'onboarding_sliders_widgets/slide_content.dart';
 import '../../core/constants/app_colors.dart';
 class OnboardingSlidersView extends GetView<OnboardingSlidersController> {
   const OnboardingSlidersView({super.key});

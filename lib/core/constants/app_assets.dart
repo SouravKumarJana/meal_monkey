@@ -11,6 +11,7 @@ class AppAssets {
   static const String dessertsPng = "assets/png/Desserts.png";
   static const String promotionsPng = "assets/png/Promotions.png";
   static const String shoppingCardPng = "assets/png/shopping-cart.png";
+  static const String arrowPng = "assets/png/arrow.png";
   static const String searchPng = "assets/png/search.png";
   static const String userProfileIconInactivePng = "assets/png/TabBarIcons/man-user.png";
   static const String homeIconInactivePng = "assets/png/TabBarIcons/001-home.png";
