@@ -11,7 +11,7 @@ Widget homeFab(HomeController controller) {
         width: 75,
         padding: const EdgeInsets.all(3),
         child: FloatingActionButton(
-          backgroundColor: isHomeActive ? const Color(0xFFFF5722) : const Color(0xFFB6B7B7),
+          backgroundColor: isHomeActive ? AppColors.primaryColor : AppColors.grey,
           shape: const CircleBorder(),
           onPressed: () => controller.changeTabIndex(-1),
           elevation: 0,
