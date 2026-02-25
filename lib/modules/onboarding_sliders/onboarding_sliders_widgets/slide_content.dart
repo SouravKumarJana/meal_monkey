@@ -69,7 +69,6 @@ class SlideContent extends GetView<OnboardingSlidersController> {
               height: 1.5,
             ),
           ),
-        
         ],
       ),
     );

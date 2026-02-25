@@ -37,7 +37,7 @@ class InitialScreenView extends GetView<InitialScreenController> {
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 40),
             child: Text(
-              "Discover the best foods from over 1,000\nrestaurants and fast delivery to your doorstep",
+              AppStrings.initialScreenDescription,
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 12,

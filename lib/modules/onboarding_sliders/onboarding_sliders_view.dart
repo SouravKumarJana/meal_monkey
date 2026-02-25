@@ -46,7 +46,7 @@ class OnboardingSlidersView extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: PrimaryButton(
-                  title: 'Next',
+                  title: AppStrings.next,
                   onPressed: controller.next,
               ),
             ),

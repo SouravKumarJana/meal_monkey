@@ -27,6 +27,7 @@ class AppStrings {
   static const String desserts = "Desserts";
   static const String promotions = "Promotions";
   static const String slider1Title = "Find Food You Love";
+  static const String initialScreenDescription = "Discover the best foods from over 1,000\nrestaurants and fast delivery to your doorstep";
   static const String slider1Subtitle = "Discover the best foods from over 1,000\nrestaurants and fast delivery to your doorstep";
   static const String slider2Title = "Fast Delivery";
   static const String slider2Subtitle = "Fast food delivery to your home, office\nwherever you are";
