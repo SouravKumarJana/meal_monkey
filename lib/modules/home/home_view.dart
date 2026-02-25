@@ -7,6 +7,7 @@ import '../../core/widgets/search_bar.dart';
 import 'home_widgets/category_card.dart';
 import 'home_widgets/bottom_navbar.dart';
 import 'home_widgets/home_fab.dart';
+import 'home_widgets/categories.dart';
 class HomeView extends  StatelessWidget {
   final controller = Get.find<HomeController>();
   HomeView({super.key});
@@ -36,9 +37,9 @@ class HomeView extends  StatelessWidget {
                   ListView.builder(
                     physics: const NeverScrollableScrollPhysics(),
                     padding: const EdgeInsets.only(top: 52, right: 20, bottom: 100),
-                    itemCount: controller.categories.length,
+                    itemCount: categories.length,
                     itemBuilder: (context, index) {
-                      return CategoryCard(controller.categories[index]);
+                      return CategoryCard(categories[index]);
                     },
                   ),
                 ],

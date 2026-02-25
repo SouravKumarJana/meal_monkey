@@ -6,8 +6,9 @@ import 'onboarding_sliders_controller.dart';
 import 'onboarding_sliders_widgets/slide_content.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_strings.dart';
-class OnboardingSlidersView extends GetView<OnboardingSlidersController> {
-  const OnboardingSlidersView({super.key});
+class OnboardingSlidersView extends StatelessWidget {
+  OnboardingSlidersView({super.key});
+  final OnboardingSlidersController controller = Get.find<OnboardingSlidersController>();
 
   @override
   Widget build(BuildContext context) {

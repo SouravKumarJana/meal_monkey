@@ -6,8 +6,9 @@ import '../../../core/constants/app_colors.dart';
 import 'signup_controller.dart';
 import '../../../core/constants/app_strings.dart';
 import '../../../core/constants/app_text_size.dart';
-class SignupView extends GetView<SignupController> {
-  const SignupView({super.key});
+class SignupView extends StatelessWidget {
+   final SignupController controller = Get.find<SignupController>();
+   SignupView({super.key});
 
   @override
   Widget build(BuildContext context) {

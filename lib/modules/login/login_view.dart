@@ -7,8 +7,9 @@ import 'login_controller.dart';
 import '../../../core/constants/app_strings.dart';
 import '../../../core/constants/app_text_size.dart';
 
-class LoginView extends GetView<LoginController> {
-  const LoginView({super.key});
+class LoginView extends StatelessWidget {
+  LoginView({super.key});
+  final LoginController controller = Get.find<LoginController>();
 
   @override
   Widget build(BuildContext context) {
@@ -35,10 +36,10 @@ class LoginView extends GetView<LoginController> {
                   const SizedBox(height: 8),
 
                   const Text(
-                    "Add your details to login",
+                    AppStrings.loginSubHeading,
                     style: TextStyle(
                       fontSize: AppTextSize.subheadingTextSize,
-                      color: Colors.grey,
+                      color: AppColors.grey,
                     ),
                   ),
 
