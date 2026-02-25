@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import '../../../core/constants/app_assets.dart';
 import '../home_controller.dart';
 import '../../../core/constants/app_colors.dart';
+import '../../../core/constants/app_strings.dart';
 class BottomNavBar extends StatelessWidget {
   final HomeController controller;
   const BottomNavBar({super.key, required this.controller});
@@ -29,17 +30,18 @@ class BottomNavBar extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              _navItem(0, AppAssets.menuIconActivePng, AppAssets.menuIconInactivePng, "Menu"),
-              _navItem(1, AppAssets.offerIconActivePng, AppAssets.offerIconInactivePng, "Offers"),
+              _navItem(0, AppAssets.menuIconActivePng, AppAssets.menuIconInactivePng, AppStrings.menu),
+              _navItem(1, AppAssets.offerIconActivePng, AppAssets.offerIconInactivePng, AppStrings.offers),
               const SizedBox(width: 45), 
-              _navItem(2, AppAssets.userProfileIconActivePng, AppAssets.userProfileIconInactivePng, "Profile"),
-              _navItem(3, AppAssets.moreIconActivePng, AppAssets.moreIconInactivePng, "More"),
+              _navItem(2, AppAssets.userProfileIconActivePng, AppAssets.userProfileIconInactivePng, AppStrings.profile),
+              _navItem(3, AppAssets.moreIconActivePng, AppAssets.moreIconInactivePng, AppStrings.more),
             ],
           ),
         ),
       ),
     ));
   }
+
   Widget _navItem(int index, String activeImg, String inactiveImg, String label) {
     bool isActive = controller.selectedIndex.value == index;
     return GestureDetector(

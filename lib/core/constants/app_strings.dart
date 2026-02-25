@@ -5,10 +5,32 @@ class AppStrings {
   static const String email = "Email";
   static const String password = "Password";
   static const String forgotPassword = "Forgot Password?";
+  static const String confirmPassword = "Confirm Password";
+  static const String pleseWait = "Please wait...";
   static const String createAnAccount = "Create an Account";
+  static const String signupSubHeading = "Add your details to sign up";
+  static const String loginSubHeading = "Add your details to login";
   static const String alreadyHaveAnAccount = "Already have an Account? ";
+  static const String dontHaveAnAccount = "Don't have an Account? ";
   static const String start = "Start";
   static const String next = "Next";
   static const String elmailLabelatLogin = "Your Email";
   static const String passwordLabelatLogin = "Password";
+  static const String home = "Home";
+  static const String menu = "Menu";
+  static const String offers = "Offers";
+  static const String profile = "Profile";
+  static const String more = "More";
+  static const String searchFood = "Search food";
+  static const String food = "Food";
+  static const String baverages = "Beverages";
+  static const String desserts = "Desserts";
+  static const String promotions = "Promotions";
+  static const String slider1Title = "Find Food You Love";
+  static const String slider1Subtitle = "Discover the best foods from over 1,000\nrestaurants and fast delivery to your doorstep";
+  static const String slider2Title = "Fast Delivery";
+  static const String slider2Subtitle = "Fast food delivery to your home, office\nwherever you are";
+  static const String slider3Title = "Live Tracking";
+  static const String slider3Subtitle = "Real time tracking of your food on the app\nonce you placed the order";
+
 }

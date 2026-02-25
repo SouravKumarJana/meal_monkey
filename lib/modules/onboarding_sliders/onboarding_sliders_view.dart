@@ -5,6 +5,7 @@ import '../../core/widgets/primary_button.dart';
 import 'onboarding_sliders_controller.dart';
 import 'onboarding_sliders_widgets/slide_content.dart';
 import '../../core/constants/app_colors.dart';
+import '../../core/constants/app_strings.dart';
 class OnboardingSlidersView extends GetView<OnboardingSlidersController> {
   const OnboardingSlidersView({super.key});
 
@@ -24,21 +25,18 @@ class OnboardingSlidersView extends GetView<OnboardingSlidersController> {
                 children: const [
                   SlideContent(
                     image: AppAssets.findFoodYouLoveVector,
-                    title: "Find Food You Love",
-                    subtitle:
-                        "Discover the best foods from over 1,000\nrestaurants and fast delivery to your doorstep",
+                    title: AppStrings.slider1Title,
+                    subtitle: AppStrings.slider1Subtitle,
                   ),
                   SlideContent(
                     image: AppAssets.deliveryVector,
-                    title: "Fast Delivery",
-                    subtitle:
-                        "Fast food delivery to your home, office\nwherever you are",
+                    title: AppStrings.slider2Title,
+                    subtitle: AppStrings.slider2Subtitle,
                   ),
                   SlideContent(
                     image: AppAssets.livrTrackingVector,
-                    title: "Live Tracking",
-                    subtitle:
-                        "Real time tracking of your food on the app\nonce you placed the order",
+                    title: AppStrings.slider3Title,
+                    subtitle: AppStrings.slider3Subtitle,
                   ),
                 ],
               ),

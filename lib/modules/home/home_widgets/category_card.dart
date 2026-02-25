@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../core/constants/app_assets.dart';
+import '../../../core/constants/app_colors.dart';
+import '../../../core/constants/app_text_size.dart';
 class CategoryCard extends StatelessWidget {
   final Map<String, String> item;
   const CategoryCard(this.item, {super.key});
@@ -18,7 +20,7 @@ class CategoryCard extends StatelessWidget {
             child: Container(
               height: 84,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: AppColors.backgroundColor,
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(42),
                   bottomLeft: Radius.circular(42),
@@ -42,7 +44,7 @@ class CategoryCard extends StatelessWidget {
                     Text(
                       item["name"]!,
                       style: const TextStyle(
-                        fontSize: 18, 
+                        fontSize: AppTextSize.categoryNameTextSize, 
                         fontWeight: FontWeight.bold, 
                         color: Color(0xFF4A4B4D)
                       ),
@@ -50,7 +52,7 @@ class CategoryCard extends StatelessWidget {
                     const SizedBox(height: 2),
                     Text(
                       item["count"]!,
-                      style: const TextStyle(color: Colors.black38, fontSize: 12),
+                      style: const TextStyle(color: Colors.black38, fontSize: AppTextSize.navItemTextSize),
                     ),
                   ],
                 ),

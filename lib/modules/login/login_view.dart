@@ -4,6 +4,8 @@ import '../../../core/constants/app_colors.dart';
 import '../../../core/widgets/primary_button.dart';
 import '../../../core/widgets/custom_textfield.dart';
 import 'login_controller.dart';
+import '../../../core/constants/app_strings.dart';
+import '../../../core/constants/app_text_size.dart';
 
 class LoginView extends GetView<LoginController> {
   const LoginView({super.key});
@@ -24,9 +26,9 @@ class LoginView extends GetView<LoginController> {
                   const Text(
                     "Login",
                     style: TextStyle(
-                      fontSize: 28,
+                      fontSize: AppTextSize.headingTextSize,
                       fontWeight: FontWeight.w400,
-                      color: Colors.black87,
+                      color: AppColors.black,
                     ),
                   ),
 
@@ -35,7 +37,7 @@ class LoginView extends GetView<LoginController> {
                   const Text(
                     "Add your details to login",
                     style: TextStyle(
-                      fontSize: 14,
+                      fontSize: AppTextSize.subheadingTextSize,
                       color: Colors.grey,
                     ),
                   ),
@@ -43,14 +45,14 @@ class LoginView extends GetView<LoginController> {
                   const SizedBox(height: 30),
 
                   CustomTextField(
-                    hint: "Your Email",
+                    hint: AppStrings.elmailLabelatLogin,
                     controller: controller.emailController,
                   ),
 
                   const SizedBox(height: 20),
 
                   CustomTextField(
-                    hint: "Password",
+                    hint: AppStrings.passwordLabelatLogin,
                     obscure: true,
                     controller: controller.passwordController,
                   ),
@@ -59,7 +61,7 @@ class LoginView extends GetView<LoginController> {
 
               
                   PrimaryButton(
-                    title: "Login",
+                    title: AppStrings.login,
                     onPressed: controller.login,
                   ),  
 
@@ -68,10 +70,10 @@ class LoginView extends GetView<LoginController> {
                   GestureDetector(
                     onTap: () {},
                     child: const Text(
-                      "Forgot your password?",
+                      AppStrings.forgotPassword,
                       style: TextStyle(
                         color: Colors.grey,
-                        fontSize: 14,
+                        fontSize: AppTextSize.subheadingTextSize,
                       ),
                     ),
                   ),
@@ -82,15 +84,15 @@ class LoginView extends GetView<LoginController> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Text(
-                        "Don't have an Account? ",
+                        AppStrings.dontHaveAnAccount,
                         style: TextStyle(color: Colors.grey),
                       ),
                       GestureDetector(
                         onTap: controller.goToSignup,
                         child: const Text(
-                          "Sign Up",
+                          AppStrings.signup,
                           style: TextStyle(
-                            color: Color(0xFFFF5A00),
+                            color: AppColors.primaryColor,
                             fontWeight: FontWeight.w600,
                           ),
                         ),

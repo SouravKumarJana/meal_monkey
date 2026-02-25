@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../onboarding_sliders_controller.dart';
 import '../../../core/constants/app_colors.dart';
+import '../../../core/constants/app_text_size.dart';
 class SlideContent extends GetView<OnboardingSlidersController> {
   final String image;
   final String title;
@@ -38,7 +39,7 @@ class SlideContent extends GetView<OnboardingSlidersController> {
                     decoration: BoxDecoration(
                       color: controller.pageIndex.value == index
                           ? AppColors.primaryColor
-                          : Colors.grey.shade400,
+                          : AppColors.grey,
                       shape: BoxShape.circle,
                     ),
                   ),
@@ -50,8 +51,8 @@ class SlideContent extends GetView<OnboardingSlidersController> {
           Text(
             title,
             textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontSize: 26,
+            style: TextStyle(
+              fontSize: AppTextSize.titleTextSize,
               fontWeight: FontWeight.w600,
               color: Colors.black87,
             ),
@@ -62,8 +63,8 @@ class SlideContent extends GetView<OnboardingSlidersController> {
           Text(
             subtitle,
             textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontSize: 14,
+            style: TextStyle(
+              fontSize: AppTextSize.subtitleTextSize,
               color: Colors.grey,
               height: 1.5,
             ),

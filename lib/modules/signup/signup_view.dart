@@ -4,7 +4,8 @@ import '../../../core/widgets/primary_button.dart';
 import '../../../core/widgets/custom_textfield.dart';
 import '../../../core/constants/app_colors.dart';
 import 'signup_controller.dart';
-
+import '../../../core/constants/app_strings.dart';
+import '../../../core/constants/app_text_size.dart';
 class SignupView extends GetView<SignupController> {
   const SignupView({super.key});
 
@@ -22,9 +23,10 @@ class SignupView extends GetView<SignupController> {
               const SizedBox(height: 40),
 
               const Text(
-                "Create Account",
+                AppStrings.signup,
                 style: TextStyle(
-                  fontSize: 26,
+                  color: AppColors.black,
+                  fontSize: AppTextSize.headingTextSize,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -32,24 +34,24 @@ class SignupView extends GetView<SignupController> {
               const SizedBox(height: 8),
 
               const Text(
-                "Add your details to sign up",
+                AppStrings.signupSubHeading,
                 style: TextStyle(
-                  fontSize: 14,
-                  color: Colors.grey,
+                  fontSize: AppTextSize.subheadingTextSize,
+                  color: AppColors.grey,
                 ),
               ),
 
               const SizedBox(height: 40),
 
               CustomTextField(
-                hint: "Email",
+                hint: AppStrings.email,
                 controller: controller.emailController,
               ),
 
               const SizedBox(height: 20),
 
               CustomTextField(
-                hint: "Password",
+                hint: AppStrings.password,
                 obscure: true,
                 controller: controller.passwordController,
               ),
@@ -57,7 +59,7 @@ class SignupView extends GetView<SignupController> {
               const SizedBox(height: 20),
 
               CustomTextField(
-                hint: "Confirm Password",
+                hint: AppStrings.confirmPassword,
                 obscure: true,
                 controller: controller.confirmPasswordController,
               ),
@@ -67,8 +69,8 @@ class SignupView extends GetView<SignupController> {
               // Signup Button
               Obx(() => PrimaryButton(
                     title: controller.isLoading.value
-                        ? "Please wait..."
-                        : "Sign Up",
+                        ? AppStrings.pleseWait
+                        : AppStrings.signup,
                     onPressed: controller.signup,
                   )),
 
@@ -78,15 +80,15 @@ class SignupView extends GetView<SignupController> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    "Already have an Account? ",
-                    style: TextStyle(color: Colors.grey),
+                    AppStrings.alreadyHaveAnAccount,
+                    style: TextStyle(color: AppColors.grey),
                   ),
                   GestureDetector(
                     onTap: controller.goToLogin,
                     child: const Text(
-                      "Login",
+                      AppStrings.login,
                       style: TextStyle(
-                        color: Color(0xFFFF5A00),
+                        color: AppColors.primaryColor,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
