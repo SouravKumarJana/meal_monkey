@@ -14,7 +14,7 @@ Widget homeFab(HomeController controller) {
           backgroundColor: isHomeActive ? AppColors.primaryColor : AppColors.grey,
           shape: const CircleBorder(),
           onPressed: () => controller.changeTabIndex(-1),
-          elevation: 0,
+          elevation: 1,
           child: Image.asset(
             isHomeActive ? AppAssets.homeIconActivePng : AppAssets.homeIconInactivePng,
             height: 30,
