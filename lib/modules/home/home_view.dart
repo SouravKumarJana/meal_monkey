@@ -11,7 +11,8 @@ import 'home_widgets/home_fab.dart';
 import 'home_widgets/categories.dart';
 import '../../core/constants/app_strings.dart';
 
-class HomeView extends  StatelessWidget {
+
+class HomeView extends StatelessWidget {
   final controller = Get.find<HomeController>();
   HomeView({super.key});
 
@@ -24,8 +25,11 @@ class HomeView extends  StatelessWidget {
         child: Column(
           children: [
             Header(title: AppStrings.menu, imagePath: AppAssets.shoppingCardSvg),
-            Search_Bar(hintText: AppStrings.searchFood, prefixIconPath: AppAssets.searchSvg),
-            //SizedBox(height: Get.height * 0.025),
+            Search_Bar(
+              hintText: AppStrings.searchFood, 
+              prefixIconPath: AppAssets.searchSvg,
+              onChanged: (value) => controller.filterSearch(value),
+            ),
             Expanded(
               child: Stack(
                 children: [
@@ -43,15 +47,15 @@ class HomeView extends  StatelessWidget {
                     top: Get.height * 0.04,
                     left: 0,
                     right: 0,
-                    bottom: Get.height * 0.055, 
+                    bottom: Get.height * 0.056, 
                     child: ClipRect( 
-                      child: ListView.builder(
+                      child: Obx(() => ListView.builder(
                         padding: const EdgeInsets.only(top: 20, right: 20, bottom: 20),
-                        itemCount: categories.length,
+                        itemCount: controller.filteredCategories.length,
                         itemBuilder: (context, index) {
-                          return CategoryCard(categories[index]);
+                          return CategoryCard(controller.filteredCategories[index]);
                         },
-                      ),
+                      )),
                     ),
                   ),
                 ],
@@ -65,5 +69,4 @@ class HomeView extends  StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
-
 }
