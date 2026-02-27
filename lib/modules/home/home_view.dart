@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'home_controller.dart';
 import '../../core/constants/app_assets.dart';
@@ -8,6 +9,8 @@ import 'home_widgets/category_card.dart';
 import 'home_widgets/bottom_navbar.dart';
 import 'home_widgets/home_fab.dart';
 import 'home_widgets/categories.dart';
+import '../../core/constants/app_strings.dart';
+
 class HomeView extends  StatelessWidget {
   final controller = Get.find<HomeController>();
   HomeView({super.key});
@@ -20,27 +23,36 @@ class HomeView extends  StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            Header(title: "Menu", imagePath: AppAssets.shoppingCardPng),
-            Search_Bar(hintText: "Search food", prefixIconPath: AppAssets.searchPng),
+            Header(title: AppStrings.menu, imagePath: AppAssets.shoppingCardSvg),
+            Search_Bar(hintText: AppStrings.searchFood, prefixIconPath: AppAssets.searchSvg),
+            //SizedBox(height: Get.height * 0.025),
             Expanded(
               child: Stack(
                 children: [
                   Positioned(
                     left: 0,
-                    top: 32,
-                    child: Image.asset(
-                      AppAssets.slideBarOrangepng,
-                      height: 450, 
+                    top: Get.height * 0.04,
+                    child: SvgPicture.asset(
+                      AppAssets.slideBarOrangeSvg,
+                      height: Get.height * 0.57, 
                       fit: BoxFit.contain,
                     ),
                   ),
-                  ListView.builder(
-                    physics: const NeverScrollableScrollPhysics(),
-                    padding: const EdgeInsets.only(top: 52, right: 20, bottom: 100),
-                    itemCount: categories.length,
-                    itemBuilder: (context, index) {
-                      return CategoryCard(categories[index]);
-                    },
+                  
+                  Positioned(
+                    top: Get.height * 0.04,
+                    left: 0,
+                    right: 0,
+                    bottom: Get.height * 0.055, 
+                    child: ClipRect( 
+                      child: ListView.builder(
+                        padding: const EdgeInsets.only(top: 20, right: 20, bottom: 20),
+                        itemCount: categories.length,
+                        itemBuilder: (context, index) {
+                          return CategoryCard(categories[index]);
+                        },
+                      ),
+                    ),
                   ),
                 ],
               ),
