@@ -67,7 +67,6 @@ class SignupView extends StatelessWidget {
 
               const SizedBox(height: 30),
 
-              // Signup Button
               Obx(() => PrimaryButton(
                     title: controller.isLoading.value
                         ? AppStrings.pleseWait

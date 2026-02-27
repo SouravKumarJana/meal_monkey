@@ -1,11 +1,11 @@
 class AppAssets {
   static const String appLogoPng = "assets/png/Logo.png";
   static const String backgroundPng = "assets/png/Background icons.png";
-  static const String slideBarOrangepng = "assets/png/Side bar orange.png";
-  static const String orangeTopShape = "assets/png/welcome_top_shape.png";
-  static const String livrTrackingVector = "assets/png/Live tracking vector.png";
-  static const String findFoodYouLoveVector = "assets/png/Find food you love vector.png";
-  static const String deliveryVector = "assets/png/Delivery vector.png";
+  static const String slideBarOrangePng = "assets/png/Side bar orange.png";
+  static const String orangeTopShapePng = "assets/png/welcome_top_shape.png";
+  static const String liveTrackingVectorPng = "assets/png/Live tracking vector.png";
+  static const String findFoodYouLoveVectorPng = "assets/png/Find food you love vector.png";
+  static const String deliveryVectorPng = "assets/png/Delivery vector.png";
   static const String foodPng = "assets/png/Food.png";
   static const String beveragesPng = "assets/png/Beverage.png";
   static const String dessertsPng = "assets/png/Desserts.png";
@@ -23,4 +23,30 @@ class AppAssets {
   static const String offerIconActivePng = "assets/png/TabBarIcons/Active State/002-shopping-bag.png";
   static const String moreIconActivePng = "assets/png/TabBarIcons/Active State/Group 8179.png";
   static const String menuIconActivePng = "assets/png/TabBarIcons/Active State/Group 8180.png";
+
+  static const String appLogoSvg = "assets/svg/Logo.svg";
+  static const String backgroundSvg = "assets/svg/Background icons.svg";
+  static const String slideBarOrangeSvg = "assets/svg/Side bar orange.svg";
+  static const String orangeTopShapeSvg = "assets/svg/Organe top shape.svg";
+  static const String liveTrackingVectorSvg = "assets/svg/Live tracking vector.svg";
+  static const String findFoodYouLoveVectorSvg = "assets/svg/Find food you love vector.svg";
+  static const String deliveryVectorSvg = "assets/svg/Delivery vector.svg";
+  static const String foodSvg = "assets/svg/Food.svg";
+  static const String beveragesSvg = "assets/svg/Beverage.svg";
+  static const String dessertsSvg = "assets/svg/Desserts.svg";
+  static const String promotionsSvg = "assets/svg/Promotions.svg";
+  static const String shoppingCardSvg = "assets/svg/shopping-cart.svg";
+  static const String arrowSvg = "assets/svg/arrow.svg";
+  static const String searchSvg = "assets/svg/search.svg";
+  static const String userProfileIconInactiveSvg = "assets/svg/TabBarIcons/man-user.svg";
+  static const String homeIconInactiveSvg = "assets/svg/TabBarIcons/001-home.svg";
+  static const String offerIconInactiveSvg = "assets/svg/TabBarIcons/002-shopping-bag.svg";
+  static const String moreIconInactiveSvg = "assets/svg/TabBarIcons/Group 6814.svg";
+  static const String menuIconInactiveSvg = "assets/svg/TabBarIcons/Group 6847.svg";
+  static const String userProfileIconActiveSvg = "assets/svg/TabBarIcons/ActiveState/man-user.svg";
+  static const String homeIconActiveSvg = "assets/svg/TabBarIcons/ActiveState/001-home.svg";
+  static const String offerIconActiveSvg = "assets/svg/TabBarIcons/ActiveState/002-shopping-bag.svg";
+  static const String moreIconActiveSvg = "assets/svg/TabBarIcons/ActiveState/Group 8179.svg";
+  static const String menuIconActiveSvg = "assets/svg/TabBarIcons/ActiveState/Group 8180.svg";
+
 }

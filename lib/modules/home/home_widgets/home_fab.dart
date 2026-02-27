@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:meal_monkey/modules/home/home_controller.dart';
 import '../../../core/constants/app_assets.dart';
@@ -11,12 +12,12 @@ Widget homeFab(HomeController controller) {
         width: 75,
         padding: const EdgeInsets.all(3),
         child: FloatingActionButton(
-          backgroundColor: isHomeActive ? AppColors.primaryColor : AppColors.grey,
+          backgroundColor: isHomeActive ? AppColors.primaryColor : AppColors.homeInactiveBackgroundColor,
           shape: const CircleBorder(),
           onPressed: () => controller.changeTabIndex(-1),
           elevation: 1,
-          child: Image.asset(
-            isHomeActive ? AppAssets.homeIconActivePng : AppAssets.homeIconInactivePng,
+          child: SvgPicture.asset(
+            isHomeActive ? AppAssets.homeIconActiveSvg : AppAssets.homeIconInactiveSvg,
             height: 30,
             color: AppColors.backgroundColor,
           ),

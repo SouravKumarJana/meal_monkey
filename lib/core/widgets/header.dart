@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_text_size.dart';
 class Header extends StatelessWidget {
@@ -19,7 +20,7 @@ class Header extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(title, style: TextStyle(fontSize: AppTextSize.headingTextSize, fontWeight: FontWeight.bold, color: AppColors.black)),
-          Image.asset(imagePath, height: 25),
+          SvgPicture.asset(imagePath, height: 25),
         ],
       ),
     );

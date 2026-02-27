@@ -17,7 +17,7 @@ class OnboardingSlidersController extends GetxController {
         curve: Curves.easeInOut,
       );
     } else {
-      Get.offAllNamed(Routes.home);
+      Get.offAllNamed(Routes.initialscreen);
     }
   }
 

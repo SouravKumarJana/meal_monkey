@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../core/constants/app_assets.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_text_size.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 class CategoryCard extends StatelessWidget {
   final Map<String, String> item;
   const CategoryCard(this.item, {super.key});
@@ -30,13 +31,14 @@ class CategoryCard extends StatelessWidget {
                 boxShadow: [
                   BoxShadow(
                     color: Colors.black.withOpacity(0.08),
-                    blurRadius: 15,
-                    offset: const Offset(0, 8),
+                    blurRadius: 10,
+                    spreadRadius: 1,
+                    offset: const Offset(0, 10),
                   )
                 ],
               ),
               child: Padding(
-                padding: const EdgeInsets.only(left: 60, right: 20),
+                padding: const EdgeInsets.only(left: 60, right: 30),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -72,14 +74,14 @@ class CategoryCard extends StatelessWidget {
                   BoxShadow(
                     color: Colors.black.withOpacity(0.15),
                     blurRadius: 8,
-                    offset: const Offset(0, 4),
+                    offset: const Offset(0, 8),
                   )
                 ],
               ),
               child: Center(
-                child: Image.asset(
-                  AppAssets.arrowPng, 
-                  height: 12,
+                child: SvgPicture.asset(
+                  AppAssets.arrowSvg, 
+                  height: 10,
                   fit: BoxFit.contain,
                 ),
               ),
@@ -88,15 +90,13 @@ class CategoryCard extends StatelessWidget {
 
           Positioned(
             left: 0,
-            child: Container(
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-              ),
-              child: Image.asset(
+            child: SizedBox(
+              height: 85,
+              width: 85,
+              child: SvgPicture.asset(
                 item["image"]!,
-                height: 85,
-                width: 85,
                 fit: BoxFit.contain,
+                alignment: Alignment.center,
               ),
             ),
           ),

@@ -25,7 +25,7 @@ class LoginView extends StatelessWidget {
                 children: [
                   SizedBox(height: 40),
                   const Text(
-                    "Login",
+                    AppStrings.login,
                     style: TextStyle(
                       fontSize: AppTextSize.headingTextSize,
                       fontWeight: FontWeight.w400,

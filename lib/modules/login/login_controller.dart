@@ -22,7 +22,7 @@ class LoginController extends GetxController {
       return;
     }
 
-    Get.offAllNamed(Routes.onboarding);
+    Get.offAllNamed(Routes.home);
   }
 
   void goToSignup() {

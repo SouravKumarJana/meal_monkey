@@ -12,6 +12,9 @@ class AppStrings {
   static const String loginSubHeading = "Add your details to login";
   static const String alreadyHaveAnAccount = "Already have an Account? ";
   static const String dontHaveAnAccount = "Don't have an Account? ";
+  static const String error = "Error";
+  static const String allFieldsAreRequired = "All fields are required";
+  static const String passwordNotMatched = "Passwords do not match";
   static const String start = "Start";
   static const String next = "Next";
   static const String elmailLabelatLogin = "Your Email";
@@ -27,11 +30,11 @@ class AppStrings {
   static const String desserts = "Desserts";
   static const String promotions = "Promotions";
   static const String slider1Title = "Find Food You Love";
-  static const String initialScreenDescription = "Discover the best foods from over 1,000\nrestaurants and fast delivery to your doorstep";
-  static const String slider1Subtitle = "Discover the best foods from over 1,000\nrestaurants and fast delivery to your doorstep";
+  static const String initialScreenDescription = "Discover the best foods from over 1,000 restaurants and fast delivery to your doorstep";
+  static const String slider1Subtitle = "Discover the best foods from over 1,000 restaurants and fast delivery to your doorstep";
   static const String slider2Title = "Fast Delivery";
-  static const String slider2Subtitle = "Fast food delivery to your home, office\nwherever you are";
+  static const String slider2Subtitle = "Fast food delivery to your home, office wherever you are";
   static const String slider3Title = "Live Tracking";
-  static const String slider3Subtitle = "Real time tracking of your food on the app\nonce you placed the order";
+  static const String slider3Subtitle = "Real time tracking of your food on the app once you placed the order";
 
 }

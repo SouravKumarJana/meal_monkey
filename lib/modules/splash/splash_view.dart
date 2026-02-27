@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import '../../core/constants/app_assets.dart';
 import 'splash_controller.dart';
@@ -15,7 +16,7 @@ class SplashView extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             height: double.infinity,
-            child: Image.asset(AppAssets.backgroundPng, fit: BoxFit.cover),
+            child: SvgPicture.asset(AppAssets.backgroundSvg, fit: BoxFit.cover),
           ),
           Center(
             child: Image.asset(AppAssets.appLogoPng, height: 150)

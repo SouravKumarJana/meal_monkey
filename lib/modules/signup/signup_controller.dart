@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../routes/app_routes.dart';
-
+import '../../../core/constants/app_strings.dart';
 class SignupController extends GetxController {
 
   final emailController = TextEditingController();
@@ -18,8 +18,8 @@ class SignupController extends GetxController {
 
     if (email.isEmpty || password.isEmpty || confirmPassword.isEmpty) {
       Get.snackbar(
-        "Error",
-        "Please fill all fields",
+        AppStrings.error,
+        AppStrings.allFieldsAreRequired,
         snackPosition: SnackPosition.BOTTOM,
       );
       return;
@@ -27,8 +27,8 @@ class SignupController extends GetxController {
 
     if (password != confirmPassword) {
       Get.snackbar(
-        "Error",
-        "Passwords do not match",
+        AppStrings.error,
+        AppStrings.passwordNotMatched,
         snackPosition: SnackPosition.BOTTOM,
       );
       return;

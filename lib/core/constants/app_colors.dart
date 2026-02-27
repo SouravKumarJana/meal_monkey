@@ -7,4 +7,5 @@ class AppColors {
   static const textFieldHintColor = Color(0xFFB6B7B7);
   static const descriptionTextColor = Color(0xFF7C7D7E);
   static const black = Colors.black;
+  static const homeInactiveBackgroundColor = Color(0xFFB6B7B7);
 }

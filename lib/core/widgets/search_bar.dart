@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import '../constants/app_colors.dart';
 class Search_Bar extends StatelessWidget {
   final String hintText;
@@ -15,7 +16,7 @@ class Search_Bar extends StatelessWidget {
           hintText: hintText,
           prefixIcon: Padding(
             padding: const EdgeInsets.all(12),
-            child: Image.asset(prefixIconPath, height: 20),
+            child: SvgPicture.asset(prefixIconPath, height: 20),
           ),
           filled: true,
           fillColor: AppColors.grey,

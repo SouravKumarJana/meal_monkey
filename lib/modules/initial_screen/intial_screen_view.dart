@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:meal_monkey/core/constants/app_strings.dart';
 import '../../core/constants/app_assets.dart';
@@ -20,8 +21,9 @@ class InitialScreenView extends GetView<InitialScreenController> {
             clipBehavior: Clip.none,
             children: [
               Image.asset(
-                AppAssets.orangeTopShape,
-                width: double.infinity,
+                AppAssets.orangeTopShapePng,
+                width: Get.width,
+                fit: BoxFit.cover,
               ),
               Positioned(
                 top: 315, 
@@ -67,7 +69,7 @@ class InitialScreenView extends GetView<InitialScreenController> {
               ],
             ),
           ),
-          const SizedBox(height: 45),
+          const SizedBox(height: 52),
         ],
       ),
     );

@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import '../onboarding_sliders_controller.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_text_size.dart';
-class SlideContent extends GetView<OnboardingSlidersController> {
+class SlideContent extends StatelessWidget {
   final String image;
   final String title;
   final String subtitle;
 
   const SlideContent({
-    super.key, 
+    super.key,
     required this.image,
     required this.title,
     required this.subtitle,
@@ -18,35 +19,13 @@ class SlideContent extends GetView<OnboardingSlidersController> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30),
+      padding: const EdgeInsets.symmetric(horizontal: 40, ),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-
-          Image.asset(image, height: 275),
-
-          const SizedBox(height: 24),
-
-          Obx(() => Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: List.generate(
-                  3,
-                  (index) => AnimatedContainer(
-                    duration: const Duration(milliseconds: 300),
-                    margin: const EdgeInsets.symmetric(horizontal: 4),
-                    width: controller.pageIndex.value == index ? 10 : 8,
-                    height: controller.pageIndex.value == index ? 10 : 8,
-                    decoration: BoxDecoration(
-                      color: controller.pageIndex.value == index
-                          ? AppColors.primaryColor
-                          : AppColors.grey,
-                      shape: BoxShape.circle,
-                    ),
-                  ),
-                ),
-              )),
-
-          const SizedBox(height: 30),
+          SvgPicture.asset(image, height: Get.height * 0.38),
+          
+          SizedBox(height: Get.height * 0.085), 
 
           Text(
             title,
@@ -54,19 +33,17 @@ class SlideContent extends GetView<OnboardingSlidersController> {
             style: TextStyle(
               fontSize: AppTextSize.titleTextSize,
               fontWeight: FontWeight.w600,
-              color: Colors.black87,
+              color: const Color(0xFF4A4B4D),
             ),
           ),
-
-          const SizedBox(height: 25),
-
+          SizedBox(height: Get.height * 0.035),
           Text(
             subtitle,
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: AppTextSize.subtitleTextSize,
-              color: Colors.grey,
-              height: 1.5,
+              color: const Color(0xFF7C7D7E),
+              //height: 1.5,
             ),
           ),
         ],
