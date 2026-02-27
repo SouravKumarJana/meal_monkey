@@ -105,13 +105,14 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
 flutter_native_splash:
-  color: "#000000"
-  image: assets/png/Logo.png
   background_image: assets/png/Background icons.png
+  image: assets/png/Logo.png
+  color: "#FFFFFF"
 
   android_12:
-    color: "#000000"
+    color: "#FFFFFF"
     image: assets/png/Logo.png
 
+  background_image_dark: "assets/png/Background icons.png"
   color_dark: "#000000"
   image_dark: assets/png/Logo.png
